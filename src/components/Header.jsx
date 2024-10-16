@@ -4,7 +4,7 @@ import { FaUtensils, FaShoppingCart } from 'react-icons/fa';
 const Header = () => {
   return (
     <header 
-      className='navbar fixed top-0 flex justify-between sm:justify-around  bg-base-300 opacity-80'> 
+      className='navbar z-40 w-full fixed top-0 flex justify-between sm:justify-around  bg-base-300 opacity-80'> 
         <motion.h1 initial={{ opacity: 0 , y:-20  }} 
       animate={{ opacity: 1 , y:0 }} 
       transition={{ duration: 0.5 }} 

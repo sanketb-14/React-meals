@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Summary = () => {
   return (
     <motion.aside
-    className="rounded-xl glass backdrop-blur-md bg-base-200/25 bg-opacity-20 w-full max-w-3xl p-8 m-4 text-center shadow-2xl"
+    className="rounded-xl glass backdrop-blur-md bg-base-200/25 bg-opacity-20 w-full max-w-3xl p-8 m-4 text-center shadow-2xl mt-20"
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
