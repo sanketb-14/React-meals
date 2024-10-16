@@ -3,25 +3,29 @@ import { FaUtensils, FaShoppingCart } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <motion.header 
-      className='navbar flex justify-around bg-gradient-to-r from-primary to-secondary'
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      transition={{ duration: 0.5 }} // Animation settings
-    > 
-        <h1 className='satisfy text-3xl font-bold tracking-widest text-nowrap bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent' >   <span className="text-secondary mx-2 text-3xl"> <FaUtensils /> </span> React-Meals</h1>
-        <div className="rounded-lg bg-base-200 w-full max-w-[12rem] flex justify-center items-center p-2">
-        <span className="mx-2">
+    <header 
+      className='navbar fixed top-0 flex justify-between sm:justify-around  bg-base-300 opacity-80'> 
+        <motion.h1 initial={{ opacity: 0 , y:-20  }} 
+      animate={{ opacity: 1 , y:0 }} 
+      transition={{ duration: 0.5 }} 
+      className='satisfy text-3xl font-bold tracking-widest text-nowrap btn  bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text'>
+          <span className=" mx-2 text-3xl text-accent"> <FaUtensils /> </span> React-Meals
+        </motion.h1>
+        <motion.div initial={{opacity:0 , y:-20}} animate={{opacity:1 , y:0}} transition={{duration:0.5}} whileHover={{
+    scale: 1.1,
+    transition: { duration: 0.5 },
+  }} className="rounded-lg  w-full max-w-[12rem] flex bg-gradient-to-br text-lg from-accent to-secondary justify-center items-center p-2 cursor text-white">
+        <span className="mx-2 ">
                 <FaShoppingCart />
             </span>
         
-            <p>Cart-Items - </p>
-            <span>0</span> {/* meal icon */}
+            <p >Cart-Items - 0 </p>
+          
             
          
           
-        </div>
-    </motion.header>
+        </motion.div>
+    </header>
   )
 }
 
